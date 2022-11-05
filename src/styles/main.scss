@@ -4,6 +4,11 @@
 
 @import "./normalize.scss";
 
+.favicon {
+  width: 16px;
+  height: 16px;
+}
+
 .page {
   font-family: "Poppins", sans-serif;
   background: $colorTextDark;
