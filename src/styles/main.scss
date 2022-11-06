@@ -44,9 +44,9 @@
 
     @include onDesktop {
       margin-bottom: 120px;
-
     }
-    @include onBigScrin {
+
+    @include onBigScreen {
       margin-bottom: 164px;
     }
 
@@ -63,7 +63,7 @@
         font-size: $titlesection;
 
       }
-      @include onBigScrin {
+      @include onBigScreen {
         font-size: $titlesectionbig;
       }
     }
@@ -76,7 +76,7 @@
   max-width: 1020px;
   padding: 0 23px;
 
-  @include onBigScrin {
+  @include onBigScreen {
     padding: 0 120px;
 
   }
@@ -97,7 +97,7 @@
     width: 187px;
   }
 
-  @include onBigScrin {
+  @include onBigScreen {
     height: 56px;
     width: 187px;
   }
@@ -122,7 +122,7 @@
     --gap: 40px;
   }
 
-  @include onBigScrin {
+  @include onBigScreen {
     --icon-width: 24px;
     --gap: 40px;
   }
@@ -162,7 +162,7 @@
     background-position: center;
   }
 
-  @include onBigScrin {
+  @include onBigScreen {
     background-position: center;
     background-size: cover;
   }
@@ -179,7 +179,7 @@
       padding-bottom: 130px;
     }
 
-    @include onBigScrin {
+    @include onBigScreen {
       padding-bottom: 203px;
     }
   }
@@ -187,7 +187,7 @@
   &__call {
     text-decoration: none;
 
-    @include onBigScrin {
+    @include onBigScreen {
       &::before {
         content: "+1 234 555-55-55";
         display: block;
@@ -224,7 +224,7 @@
     @include onDesktop {
       font-size: 64px;
     }
-    @include onBigScrin {
+    @include onBigScreen {
       font-size: 80px;
     }
   }
@@ -285,11 +285,10 @@
     text-transform: uppercase;
     text-decoration: none;
     color: $colorTextDark;
-    transition: all 0.3s;
+    transition: color 0.3s;
 
     &:hover {
-      color: #000;
-      transform: scale(1.05);
+      color: #fa11aa;
     }
 
     &--phone {
@@ -304,11 +303,10 @@
       letter-spacing: 2px;
       padding-bottom: 8px;
       border-bottom: 1px solid $colorTextDark;
-      transition: all 0.3s;
+      transition: color 0.3s;
 
       &:hover {
-        color: #000;
-        transform: scale(1.05);
+        color: #fa11aa;
       }
 
     }
@@ -326,26 +324,26 @@
 
   }
 
-  @include onBigScrin {
-    grid-template-columns: repeat($gridOnBigScrin, 1fr);
+  @include onBigScreen {
+    grid-template-columns: repeat($gridOnBigScreen, 1fr);
     column-gap: 24px;
   }
 
-  &--onBigScrin {
+  &--onBigScreen {
     display: block;
 
     @include onDesktop {
       display: grid;
     }
-    @include onBigScrin {
+    @include onBigScreen {
       display: grid;
     }
   }
 
   &__item {
-    @include onBigScrin {
-      @for $start from 1 through $gridOnBigScrin {
-        @for $end from $start through $gridOnBigScrin {
+    @include onBigScreen {
+      @for $start from 1 through $gridOnBigScreen {
+        @for $end from $start through $gridOnBigScreen {
           &--big-#{$start}-#{$end} {
             grid-column: #{$start} / #{$end + 1};
 
@@ -378,7 +376,7 @@
       margin: 60px 0 0;
       font-size: $titlesection;
     }
-    @include onBigScrin {
+    @include onBigScreen {
       margin: 60px 0 0;
       font-size: $titlesectionbig;
     }
@@ -392,7 +390,7 @@
       font-size: 23px;
       line-height: 32px;
     }
-    @include onBigScrin {
+    @include onBigScreen {
       margin-top: 60px;
       font-size: 23px;
       line-height: 32px;
@@ -407,7 +405,7 @@
   @include onDesktop {
     flex-direction: column;
   }
-  @include onBigScrin {
+  @include onBigScreen {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 24px;
@@ -435,8 +433,8 @@
       height: 316px;
       width: $content-width-desktop;
     }
-    @include onBigScrin {
-      width: $content-width-bigScrin;
+    @include onBigScreen {
+      width: $content-width-bigScreen;
       height: 264px;
     }
 
@@ -458,8 +456,8 @@
     @include onDesktop {
       width: $content-width-desktop;
     }
-    @include onBigScrin {
-      width: $content-width-bigScrin;
+    @include onBigScreen {
+      width: $content-width-bigScreen;
     }
   }
 
@@ -488,7 +486,7 @@
       padding-bottom: 0;
     }
 
-    @include onBigScrin {
+    @include onBigScreen {
       height: 320px;
       padding-bottom: 0;
       max-height: 320px;
@@ -520,7 +518,7 @@
       margin: 0 0 48px;
     }
 
-    @include onBigScrin {
+    @include onBigScreen {
       margin: 0 0 48px;
     }
 
@@ -634,7 +632,7 @@
     background-position: right 20%;
   }
 
-  @include onBigScrin {
+  @include onBigScreen {
     height: 555px;
     background-size: cover;
   }

@@ -5,7 +5,7 @@
 
 }
 
-@mixin onBigScrin {
+@mixin onBigScreen {
   @media (min-width: 1020px) /*and (max-width: 1260px)*/ {
     @content;
   }
